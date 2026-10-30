@@ -1,0 +1,170 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #f3f4f6;
+  background: linear-gradient(135deg, #1e293b, #0b1020 70%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 20px 60px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.app-header h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+.app-header p {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 1.15rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.interview-card,
+.questions-section {
+  padding: 28px;
+  margin-bottom: 24px;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.9);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.interview-card h2,
+.questions-section h2 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.interview-card > p {
+  text-align: center;
+  color: #cbd5e1;
+  margin-bottom: 28px;
+}
+
+.interview-card form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 18px;
+}
+
+.interview-card label {
+  align-self: end;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.interview-card input,
+.interview-card select {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  background: #1e293b;
+  color: #f8fafc;
+  font-size: 1rem;
+}
+
+.interview-card input:focus,
+.interview-card select:focus {
+  outline: 2px solid #818cf8;
+  outline-offset: 2px;
+}
+
+.interview-card button {
+  grid-column: 1 / -1;
+  width: 100%;
+  margin-top: 12px;
+  padding: 13px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.interview-card button:hover {
+  background: #4f46e5;
+}
+
+.interview-card button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.questions-section > p {
+  color: #cbd5e1;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.questions-section ol {
+  padding-left: 24px;
+}
+
+.questions-section li {
+  margin: 14px 0;
+  padding-left: 6px;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 28px 14px 40px;
+  }
+
+  .app-header {
+    margin-bottom: 24px;
+  }
+
+  .interview-card,
+  .questions-section {
+    padding: 20px;
+  }
+
+  .interview-card form {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .interview-card label {
+    margin-top: 8px;
+  }
+
+  .interview-card button {
+    grid-column: auto;
+  }
+}
